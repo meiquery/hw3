@@ -21,43 +21,34 @@
           <h2>Generate a Password</h2>
          </div>
 
-           <!--password criteria settings-->
+      <!--password criteria settings-->
+       <container class="settings">
+
          <div id=sliderLength>
-            <label>Length: <span id="length"></span></label>
+            <label>Length:  <span id="howlong"></span></label>
             <input type="range" min="8" max="128" value="16" onmousemove="rangeSlide(this.value)"/>
          </div>
 
-         <div id="setLower">
             <label id="lowercase">Lowercase Letters</label>
-            <input class="switch" type="checkbox"/>
-            <span class="toggle"></span>
-         </div>
-
-         <div id="setUpper">
+            <input type="checkbox"/>
+         
             <label id="uppercase">Uppercase Letters</label>
-            <input class="switch" type="checkbox"/>
-            <span class="toggle"></span>
-         </div>
+            <input type="checkbox"/>
 
-         <div id="setNumeric">
             <label id="numeric">Numbers</label>
-            <input class="switch" type="checkbox"/>
-            <span class="toggle"></span>
-         </div>
+            <input type="checkbox"/>
 
-         <div id="setSpecial">
             <label id="special">Special Characters</label>
-            <input class="switch" type="checkbox"/>
-            <span class="toggle"></span>
-         </div>
+            <input type="checkbox"/>
+        </container>
 
         <div class="card-body">
           <textarea
             readonly
-            id="password"
-            placeholder="Your Secure Password"
+            id="passcode"
+            placeholder="Your Secure Password" 
             aria-label="Generated Password"
-          ></textarea>
+            ></textarea>
         </div>
 
         <div class="card-footer">
