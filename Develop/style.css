@@ -50,7 +50,107 @@ header {
   height: 2px;
 }
 
+/* #sliderLength.input {
+position: absolute;
+-webkit-appearance: none;
+outline: none;
+box-sizing: border-box;
+} */
+
+/*slider stylings*/
+
+input[type="range"] { 
+  margin: auto;
+  -webkit-appearance: none;
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 0; 
+}
+
+::-webkit-slider-runnable-track {
+  background: #ddd;
+}
+
+::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px; /* 1 */
+  height: 40px;
+  background: #fff;
+  box-shadow: -100vw 0 0 100vw red;
+  border: 1px solid #999;
+}
+
+::-moz-range-track {
+  height: 20px;
+  background: #ddd;
+}
+
+::-moz-range-thumb {
+  height: 20px;
+  width: 10px;
+  border: 3px solid #999;
+  border-radius: 0 !important;
+  box-shadow: -100vw 0 0 100vw red;
+  box-sizing: border-box;
+}
+
+/*switch stylings*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  width: 20px;
+  height: 17px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .toggle {
+  background-color: #2196F3;
+}
+
+input:focus + .toggle {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .toggle:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/*div for generated password, hidden until generated*/
+
 .card-body {
+  display: none;
   min-height: 100px;
 }
 
